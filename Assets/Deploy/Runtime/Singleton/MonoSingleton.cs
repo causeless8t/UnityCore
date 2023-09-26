@@ -16,7 +16,7 @@ namespace Causeless3t.Core
         
         private static string GetGameObjectPath(GameObject gameObject) => $"\"{gameObject.name}\" in scene \"{gameObject.scene.name}\"";
 
-#region InstanceAccess
+#region Access
         public static bool InstanceExists => _lazyInstance?.IsValueCreated ?? false;
 
         public static T? InstanceOrNull => InstanceExists ? _lazyInstance?.Value : null;
@@ -33,9 +33,9 @@ namespace Causeless3t.Core
             GetOrCreateInstance();
             return true;
         }
-#endregion // InstanceAccess
+#endregion Access
 
-#region InstanceGeneration
+#region Generation
         private static T GetOrCreateInstance()
         {
             _lazyInstance ??= GenerateLazyInstance();
@@ -106,9 +106,9 @@ namespace Causeless3t.Core
             Debug.Log($"<{typeof(T).Name}> instance assigned to existing {GetGameObjectPath(gameObject)}.");
             return instance;
         }
-#endregion // InstanceGeneration
+#endregion Generation
 
-#region InstanceDestruction
+#region Destruction
         public static void DestroySingletonInstance()
         {
             var instance = InstanceOrNull;
@@ -137,7 +137,7 @@ namespace Causeless3t.Core
             _lazyInstance = null;
             _instanceGameObject.Item2 = null;
         }
-#endregion // InstanceDestruction
+#endregion Destruction
 
 #region MonoBehaviour
         private bool _isApplicationQuitting;
