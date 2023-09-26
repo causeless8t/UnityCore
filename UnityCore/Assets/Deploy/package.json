@@ -1,0 +1,13 @@
+{
+  "name": "com.causeless3t.unitycore",
+  "version": "1.0.0",
+  "displayName": "UnityCore",
+  "description": "Unity Core",
+  "changelogUrl": "https://github.com/causeless8t/UnityCore.git/Assets/Deploy/CHANGELOG.md",
+  "unity": "2022.3",
+  "author": "causeless3t",
+  "keywords": [
+    "UnityCore"
+  ],
+  "gitDependencies": {}
+}
