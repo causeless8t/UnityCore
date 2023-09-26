@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Causeless3t.Core
 {
-	public sealed class Singleton<T> where T : class
+	public class Singleton<T> where T : class
 	{
 		private static Lazy<T>? _lazyInstance;
 

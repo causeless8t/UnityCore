@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Causeless3t.Core
 {
-    public sealed class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
+    public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static Lazy<T>? _lazyInstance;
 
