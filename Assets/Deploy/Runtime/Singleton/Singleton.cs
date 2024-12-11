@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Causeless3t.Core
 {
-	public class Singleton<T> where T : class
+	public class Singleton<T> : IUpdatable where T : class
 	{
 		private static Lazy<T>? _lazyInstance;
 
@@ -102,5 +102,7 @@ namespace Causeless3t.Core
 			_lazyInstance = null;
 		}
 #endregion Destruction
+
+		public virtual void OnUpdate() { }
 	}
 }
