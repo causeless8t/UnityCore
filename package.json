@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "displayName": "Unity Core",
   "description": "Lightweight reusable runtime foundations and utilities for Unity projects.",
-  "unity": "6000.3",
+  "unity": "2022.3",
   "author": {
     "name": "Hamin Jeong",
     "url": "https://github.com/causeless8t"
