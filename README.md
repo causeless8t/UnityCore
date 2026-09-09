@@ -129,7 +129,7 @@ Unity Object의 Null 처리, `MonoBehaviour`의 생명주기, Scene 전환과 Ap
 Unity Package Manager에서 Git URL을 통해 설치할 수 있습니다.
 
 ```text
-https://github.com/causeless8t/UnityCore.git?path=Assets/Deploy
+https://github.com/causeless8t/UnityCore.git
 ```
 
 Unity Editor에서:
@@ -145,7 +145,7 @@ Window
 
 ## 요구 사항
 
-* Unity 2022.3 이상
+* Unity 2022 이상
 * C#
 
 ## Package

@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Causeless3t.Core
 {
-	public class Singleton<T> : IUpdatable where T : class
+	public class Singleton<T> : IUpdatable where T : class, new()
 	{
 		private static Lazy<T>? _lazyInstance;
 
@@ -45,20 +45,10 @@ namespace Causeless3t.Core
 			return instance;
 		}
 		
-		public static T GenerateInstance()
+		private static T GenerateInstance()
 		{
-			var publicConstructors = typeof(T).GetConstructors(BindingFlags.Public | BindingFlags.Instance);
-			if (publicConstructors.Length == 0)
-			{
-				throw new MissingMethodException($"{typeof(T).Name} doesn't have a public constructor.");
-			}
-			if (publicConstructors[0].Invoke(null!) is not T instance)
-			{
-				throw new MissingMethodException($"{typeof(T).Name} has a public constructor that does not return an instance of {typeof(T).Name}.");
-			}
-
 			Debug.Log($"<color=red>+ Instance created:</color> <{typeof(T).Name}>");
-			return instance;
+			return new T();
 		}
 
 		private static Lazy<T> GenerateLazyInstance()
