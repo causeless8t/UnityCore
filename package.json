@@ -1,0 +1,18 @@
+{
+  "name": "com.causeless3t.unity-core",
+  "version": "1.1.0",
+  "displayName": "Unity Core",
+  "description": "Lightweight reusable runtime foundations and utilities for Unity projects.",
+  "unity": "6000.3",
+  "author": {
+    "name": "Hamin Jeong",
+    "url": "https://github.com/causeless8t"
+  },
+  "keywords": [
+    "unity",
+    "core",
+    "singleton",
+    "utilities"
+  ],
+  "gitDependencies": {}
+}
